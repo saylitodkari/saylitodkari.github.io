@@ -1,0 +1,108 @@
+body {
+	    font-size: 16px;
+	    color: #fff;
+	    /*background-color: #61122f;*/
+	    font-family: 'Source Sans Pro', sans-serif;
+	}
+	
+	/** HEADER **/
+
+    #header-nav {
+        /*background-color: grey;*/
+        /*height:100px;*/
+        margin-right: -30px;
+    }
+
+    .navbar-header{
+    	background-color: grey;
+       	width: 100%;
+    }
+
+    .container-fluid{
+    	padding-right: 0px;
+    	padding-left: 0px;
+    }
+
+    .navbar-brand h1 {   /* Food LCC Title*/
+        color: #7d1913;
+        font-family: 'Abril Fatface', cursive;
+        font-weight: bolder;
+        font-size: 1.8em;
+        margin: 15px 5px 5px ;
+
+    }
+    
+    #header-nav button {    
+        margin-top: 15px;
+    } 
+
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {   /*to change the color of button when hover*/
+        background-color: #fce29e;
+    }
+
+    .navbar-collapse {
+        border-top: 0;
+    }
+
+    .navbar-brand, .navbar-nav li a {     /* dropdown backgroud effects*/
+        line-height: 20px;
+        padding-top: 0;
+    }
+    
+    .text-center{
+    	margin-top: 30px;
+    	color: red;
+    	text-align: center;
+    }
+
+    #nav-list{
+    	margin: 0px -15px 0px ;
+    }
+    #nav-list li a{
+    	border: 1px solid black;
+    	margin-top: -1px;
+    }
+        
+    #nav-list a {     /* it effects content on a*/
+        font-weight: bolder;
+        color: #282828;
+        font-size: 1.2em;
+        text-align: center;
+    }
+    
+    #nav-list a:hover {             /* it effects content on a when you move cursor on it*/  
+        color: green;
+        background-color: #E7E7E7;
+    }
+    
+    .navbar-header button.navbar-toggle, .navbar-header .icon-bar {   /*to change the color of button*/
+        border: 1px solid #7d1913;
+    }
+   
+    /** END HEADER */
+
+    /** MAIN PAGE */
+
+    #main-content {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    #main-content h2 {
+        font-size: 2.9em;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    
+    #main-content h3 {
+        font-size: 1.6em;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+    
+    #main-section {
+        background-color: #82d06b;
+        box-shadow: 0 0 30px #0f5900;
+        padding: 15px;
+    }
