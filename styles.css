@@ -1,0 +1,117 @@
+body {
+  font-size: 16px;
+  color: rgba(34, 33, 33, 0.884);
+  background-color: #ffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#header-nav {
+  background-color: maroon;
+  border-radius: 0;
+  border: 0;
+  min-height: 30px;
+}
+
+.navbar-brand h1 {
+  font-family: 'Lora', serif;
+  color: black;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: .75;
+  padding: 20px 20px;
+}
+
+.nav{
+border-bottom: 1px solid grey;
+height: 70px;
+text-align: right;
+line-height: 70px;
+}
+
+.menu {
+    margin: 0 30px 0 0;
+    display: none;
+}
+
+.menu a{
+    clear:right;
+    text-decoration: none;
+    color: black;
+    background-color: grey;
+    margin: 0 10px;
+    line-height: 30px;
+}
+
+span{
+    color: black;
+}
+
+label{
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display:none;
+    width:26px;
+    float:right;
+}
+#toggle{
+    display: none;
+}
+
+@media only screen and (max-width:780px){
+    label{
+        display:block;
+        cursor:pointer;
+    }
+    .menu{
+        text-align: center;
+        width:100%;
+        display: none;
+    }
+    .menu a{
+        display:block;
+        border-bottom: 1px solid black;
+        margin:0px;
+    }
+    .menu a:hover {
+        background: rgb(236, 236, 209)
+    }
+    #toggle:checked + .menu{
+        display:block;
+    }
+}
+
+#page-title {
+  font-weight: bold;
+  margin-top: 130px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#main-text {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.text-background {
+  height: 1000px;
+  padding: 20px 40px 20px 40px;
+  background-color: lightblue;
+  overflow: hidden;
+}
+
+h3 {
+  font-weight: bold;
+  color:green;
+  font-size: 35px;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+    
+   
