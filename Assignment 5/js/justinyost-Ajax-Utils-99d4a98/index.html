@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>jtyost2/Ajax-Utils @ GitHub</title>
+	
+	<style type="text/css">
+	body {
+		margin-top: 1.0em;
+		background-color: #332822;
+		font-family: Helvetica, Arial, FreeSans, san-serif;
+		color: #ffffff;
+	}
+	#container {
+		margin: 0 auto;
+		width: 700px;
+	}
+	h1 { font-size: 3.8em; color: #F2DFBC; margin-bottom: 3px; }
+	h1 .small { font-size: 0.4em; }
+	h1 a { text-decoration: none }
+	h2 { font-size: 1.5em; color: #F2DFBC; }
+	h3 { text-align: center; color: #F2DFBC; }
+	a { color: #7F7E60; }
+	.description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+	.download { float: right; }
+	pre { background: #000; color: #fff; padding: 15px;}
+	hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+	.footer { text-align:center; padding-top:30px; font-style: italic; }
+	</style>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<script type="text/javascript" src="./jquery.replace_location.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function (){
+			$('.replace_location').replace_location({ajaxType: 'GET'});
+		});
+	</script>
+</head>
+<body>
+	<a href="http://github.com/jtyost2/Ajax-Utils">
+		<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
+	</a>
+	
+	<div id="container">
+		<h1>
+			<a href="http://github.com/jtyost2/Ajax-Utils">Ajax-Utils</a>
+
+			<span class="small">by <a href="http://github.com/jtyost2">jtyost2</a></span>
+		</h1>
+
+		<div class="description">
+		
+		</div>
+
+		<h2>Dependencies</h2>
+		<p>jQuery 1.7 &ndash; Tested jQuery 1.7+</p>
+
+		
+		<h2>Authors</h2>
+		<p>Justin Yost (justin.yost@yostivanich.com)</p>
+			
+		<h2>Download</h2>
+		<p>
+			You can download this project in either
+			<a href="http://github.com/jtyost2/Ajax-Utils/zipball/master">zip</a> or
+			<a href="http://github.com/jtyost2/Ajax-Utils/tarball/master">tar</a> formats.
+		</p>
+
+		<p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+		by running:
+			<pre>$ git clone git://github.com/jtyost2/Ajax-Utils</pre>
+		</p>
+		
+		<h2>Demo of Replace Location jQuery Plugin</h2>
+		
+		<h3>Replace Location with a Link</h3>
+		<p id="replaceThisParagraphButton">
+			This paragraph will go away when you click the link.
+		</p>
+		
+		<a href="./sample_ajax.html" class="replace_location" data-replace-location="#replaceThisParagraphButton">Replace the above paragraph with data.</a>
+		
+		<h4>Code</h4>
+		<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+	$(document).ready(function (){
+		$('.replace_location').replace_location({ajaxType: 'GET'});
+	});
+&lt;/script&gt;
+&lt;p id=&quot;replaceThisParagraphButton&quot;&gt;
+This pagraph will go away when you click the link.
+&lt;/p&gt;
+
+&lt;a
+	href=&quot;./sample_ajax.php&quot;
+	class=&quot;replace_location middle&quot;
+	data-replace-location=&quot;#replaceThisParagraphButton&quot;&gt;
+	Replace the above paragraph with data.
+&lt;/a&gt;
+		</pre>
+
+		
+		<h3>Replace Location with a Select Element</h3>
+		<p id="replaceThisParagraphSelect">
+		This paragraph will go away when you change the select.
+		</p>
+		
+		<form>
+			<select name="select" class="replace_location" href="./sample_ajax.html" data-replace-location="#replaceThisParagraphSelect">
+				<option value="first">First</option>
+				<option value="second">Second</option>
+				<option value="third">Third</option>
+				<option value="fourth">Fourth</option>
+			</select>
+		</form>
+		
+		<h4>Code</h4>
+		<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+	$(document).ready(function (){
+		$('.replace_location').replace_location({ajaxType: 'GET'});
+	});
+&lt;/script&gt;
+&lt;p id=&quot;replaceThisParagraphSelect&quot;&gt;
+
+This paragraph will go away when you change the select.
+&lt;/p&gt;
+
+&lt;form&gt;
+	&lt;select
+		name=&quot;select&quot;
+		class=&quot;replace_location&quot;
+		href=&quot;./sample_ajax.php&quot;
+		data-replace-location=&quot;#replaceThisPargraphSelect&quot;&gt;
+		
+		&lt;option value=&quot;first&quot;&gt;First&lt;/option&gt;
+		&lt;option value=&quot;second&quot;&gt;Second&lt;/option&gt;
+		&lt;option value=&quot;third&quot;&gt;Third&lt;/option&gt;
+		&lt;option value=&quot;fourth&quot;&gt;Fourth&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/form&gt;
+		</pre>
+		
+		<h3>Replace Location with a Submit Event</h3>
+		<p id="replaceThisParagraphSubmit">
+		This paragraph will go away when you submit the form.
+		</p>
+		<form method="get" action="./sample_ajax.html" data-replace-location="#replaceThisParagraphSubmit" class="replace_location">
+			<input type="text"></input>
+			<select name="select">
+				<option value="first">First</option>
+				<option value="second">Second</option>
+				<option value="third">Third</option>
+				<option value="fourth">Fourth</option>
+			</select>
+			<input type="submit"/>
+		</form>
+		
+		<h4>Code</h4>
+		<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+	$(document).ready(function (){
+		$('.replace_location').replace_location({ajaxType: 'GET'});
+	});
+&lt;/script&gt;
+&lt;p id=&quot;replaceThisParagraphSubmit&quot;&gt;
+This paragraph will go away when you submit the form.
+&lt;/p&gt;
+
+&lt;form method="get" action="./sample_ajax.html" data-replace-location="#replaceThisParagraphSubmit" class="replace_location&gt;
+	&lt;input type=&quot;text&quot;&gt;&lt;/input&gt;
+	&lt;select&gt;
+		&lt;option value=&quot;first&quot;&gt;First&lt;/option&gt;
+		&lt;option value=&quot;second&quot;&gt;Second&lt;/option&gt;
+		&lt;option value=&quot;third&quot;&gt;Third&lt;/option&gt;
+		&lt;option value=&quot;fourth&quot;&gt;Fourth&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/form&gt;
+		</pre>
+
+		<div class="footer">
+			get the source code on GitHub : <a href="http://github.com/jtyost2/Ajax-Utils">jtyost2/Ajax-Utils</a>
+		</div>
+	</div>
+</body>
+</html>
